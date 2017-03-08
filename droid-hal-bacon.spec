@@ -9,4 +9,10 @@
 /selinux_version\
 /service_contexts\
 %{nil}
+
+%define additional_post_scripts \
+/usr/bin/groupadd-user media_rw || :\
+%{nil}
+
 %include rpm/dhd/droid-hal-device.inc
+
